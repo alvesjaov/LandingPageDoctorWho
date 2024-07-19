@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    padding: 1rem;
+}
+
+.header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+nav {
+       margin-bottom: 2rem;
+}
+
+nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.serieInfo {
+    margin-top: 2rem;
+}
+
+.serieInfoContent {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.serieInfoImg {
+    flex-shrink: 0;
+}
+
+.logoDoctorWho {
+    width: 35rem;
+    height: 20rem;
+    border-radius: 0.75rem;
+}
+
+.serieInfoText {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.infoCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem; /* Aumenta o espaçamento entre os cards */
+    justify-content: center; /* Alinha os cards ao centro */
+}
+
+.infoCard {
+    width: 26rem; /* Largura dos cards */
+    border-radius: 1rem;
+    border: solid 0.05rem #b6b6b6;
+    box-shadow: 1rem 0 1rem 0.1rem #b6b6b6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: transform 0.3s ease; /* Adiciona um efeito suave ao passar o mouse */
+}
+
+.infoCard:hover {
+    transform: scale(1.02); /* Aumenta ligeiramente o card ao passar o mouse */
+}
+
+.infoImg {
+    margin-bottom: 1rem;
+}
+
+.infoCardText {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.doctorImage {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+}
+
+#section1 {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+    .infoCard {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
