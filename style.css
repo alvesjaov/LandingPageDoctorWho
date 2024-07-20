@@ -24,7 +24,7 @@ main {
 }
 
 nav {
-       margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 nav a {
@@ -36,6 +36,10 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+
+p {
+    margin-bottom: 0.5rem;
 }
 
 .serieInfo {
@@ -59,47 +63,55 @@ nav a:hover {
 }
 
 .serieInfoText {
+    width: 50%;
     flex-grow: 1;
-    text-align: left;
+    text-align: justify;
+    margin-right: 3rem;
 }
 
 .infoCardsContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5rem; /* Aumenta o espaçamento entre os cards */
-    justify-content: center; /* Alinha os cards ao centro */
+    gap: 2.5rem;
+    justify-content: center;
 }
 
 .infoCard {
-    width: 26rem; /* Largura dos cards */
+    width: 40%;
     border-radius: 1rem;
     border: solid 0.05rem #b6b6b6;
     box-shadow: 1rem 0 1rem 0.1rem #b6b6b6;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 1rem;
     box-sizing: border-box;
-    transition: transform 0.3s ease; /* Adiciona um efeito suave ao passar o mouse */
+    transition: transform 0.3s ease;
+    margin:  2rem;
 }
 
 .infoCard:hover {
-    transform: scale(1.02); /* Aumenta ligeiramente o card ao passar o mouse */
+    transform: scale(1.02);
+}
+
+.infoContent {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
 }
 
 .infoImg {
-    margin-bottom: 1rem;
-}
-
-.infoCardText {
-    margin-top: 1rem;
-    text-align: center;
+    flex-shrink: 0;
 }
 
 .doctorImage {
-    width: 100%;
+    width: 15rem;
     height: auto;
     border-radius: 0.75rem;
+}
+
+.infoCardText {
+    text-align: left;
 }
 
 #section1 {
@@ -107,9 +119,94 @@ nav a:hover {
     margin-bottom: 4rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px ) {
+    .serieInfoContent {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logoDoctorWho{
+        width: 100%;
+        height: auto;
+    }
+    .infoCard{
+        width: 100%;
+    }
+    .infoContent {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* alinha o texto ao centro */
+    }
+
+    .infoImg, .doctorImage {
+        width: 100%;
+        height: auto;
+    }
+
+    .infoCardText {
+        text-align: center; /* ajusta o texto para o centro */
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .serieInfoText {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .infoCardsContainer {
+        gap: 1.5rem;
+    }
+
     .infoCard {
         width: 100%;
-        margin: 1rem 0;
+    }
+
+    .doctorImage {
+        width: 10rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.875rem;
+    }
+
+    nav a {
+        font-size: 0.875rem;
+    }
+
+    .serieInfoText {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .infoCardsContainer {
+        gap: 1rem;
+    }
+
+    .infoCard {
+        width: 100%;
+    }
+
+    .doctorImage {
+        width: 8rem;
     }
 }
